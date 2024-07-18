@@ -1,15 +1,18 @@
 package pageObjects.modules;
 
+import java.util.List;
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.asserts.SoftAssert;
+import org.openqa.selenium.support.FindBys;
 
 import pageObjects.initializePageObjects.PageFactoryInitializer;
 import utils.ExplicitWaiting;
 
 public class CartPage extends PageFactoryInitializer{
 
-	@FindBy (xpath="//span[@class='itemcount']")
+	@FindBy (xpath="//a[@href='https://www.bookswagon.com/shoppingcart.aspx']//span[@class='itemcount']")
 	private WebElement cartPage_Logo;
 	
 	@FindBy (xpath="//a[normalize-space()='Book']")
@@ -36,6 +39,12 @@ public class CartPage extends PageFactoryInitializer{
 	@FindBy (id="ctl00_phBody_BookCart_lvCart_imgPayment")
 	private WebElement buy_Btn;
 	
+	@FindBy (xpath="//a[@href='https://www.bookswagon.com/shoppingcart.aspx']")
+	private WebElement cartPage_Link;
+	
+	@FindBy (xpath="//a[text()='Remove']")
+	private List<WebElement> newRemove_Btn;
+	
 	public boolean isDisplay_Cartage_Logo() {
 		return cartPage_Logo.isDisplayed();
 	}
@@ -51,6 +60,7 @@ public class CartPage extends PageFactoryInitializer{
 		bookName_The_Hidden_Hindu.click();
 		add_To_Cart_Btn.click();
 		ExplicitWaiting.waitForSomeTime(2000);
+		
 	}
 	
 	public String getText_Cart_Item() {
@@ -83,9 +93,12 @@ public class CartPage extends PageFactoryInitializer{
 	
 	public void preCondition_For_CartPage() {
 		add_Book_To_Cart();
-		click_CartPage_Logo();
-		
+		click_On_CartPage_Link();
+		ExplicitWaiting.waitForSomeTime(1000);
 	}
 
+	public void click_On_CartPage_Link() {
+		cartPage_Link.click();
+	}
 }
 
