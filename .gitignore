@@ -28,3 +28,4 @@ video
 
 #gedit
 *.*~
+src/test/resources/Reports/*
