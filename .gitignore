@@ -28,4 +28,4 @@ video
 
 #gedit
 *.*~
-./WebAutomation_Extent/src/test/resources/Reports
+src/test/resources/Reports/*
