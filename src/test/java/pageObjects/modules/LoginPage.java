@@ -54,7 +54,7 @@ public class LoginPage extends PageFactoryInitializer {
 
 	public void click_LoginIn_Btn() {
 		loginIn_Btn.click();
-		ExplicitWaiting.waitForSomeTime(2000);
+		ExplicitWaiting.waitForSomeTime(5000);
 	}
 
 	public boolean isDisplay_EmailId_Txt() {
