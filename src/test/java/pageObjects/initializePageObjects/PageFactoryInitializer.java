@@ -16,7 +16,6 @@ public class PageFactoryInitializer extends BaseMethod {
 	
 	public CartPage cartPage() {
 		return PageFactory.initElements(getWebDriver(),CartPage.class);
-		
 	}
 
 	public LoginPage loginPage() {

@@ -70,6 +70,8 @@ public class LoginPage extends PageFactoryInitializer {
 	}
 
 	public void login_ToApplication(String username, String password) {
+		mouseOver_MyAccount_Btn();
+		click_Login_Link();
 		sendKeys_EmailId_Txt(username);
 		sendkeys_Password_Txt(password);
 		click_LoginIn_Btn();
