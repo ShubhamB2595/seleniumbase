@@ -32,7 +32,7 @@ public class HomePage extends PageFactoryInitializer{
 		searchBar_Txt.sendKeys(product);
 	}
 	
-	public void click_Search_Btn() {
+	public void click_Search_Btn() {		
 		search_Btn.click();
 	}
 	
