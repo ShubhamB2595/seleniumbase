@@ -104,7 +104,7 @@ public class CartPage extends PageFactoryInitializer {
 	@FindBy(xpath="//a[text()='Fiction Books']")
 	private WebElement fictionBook_Link;
 	
-	@FindBy(xpath="//img[@alt='Bihar Diaries']")
+	@FindBy(xpath="//img[@alt='It Ends with Us']")
 	private WebElement fiction_Book;
 	
 	@FindBy(xpath="//a[text()='Award Winners']")
@@ -265,7 +265,6 @@ public class CartPage extends PageFactoryInitializer {
 	public void click_Minus_Btn() {
 		ExplicitWaiting.explicitWaitElementToBeClickable(minus_Btn, 3000);
 		minus_Btn.click();
-		ExplicitWaiting.waitForSomeTime(3000);
 	}
 	
 	public String getShoppingCartPage_Title() {
@@ -362,7 +361,7 @@ public class CartPage extends PageFactoryInitializer {
 		return fiction_Book.isDisplayed();
 	}
 	
-	public void click_FictionActOfGod_Book() {
+	public void click_FictionBiharDairies_Book() {
 		ExplicitWaiting.explicitWaitElementToBeClickable(fiction_Book, 2000);
 		fiction_Book.click();
 	}
