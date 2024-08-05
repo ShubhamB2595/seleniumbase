@@ -157,7 +157,7 @@ public class ExplicitWaiting extends BaseMethod {
     }
     
     public static void waitForSomeTime(long timeInSeconds) {
-    	WebDriverWait waitForTime = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
-    	waitForTime.withTimeout(Duration.ofSeconds(timeInSeconds));
+    	WebDriverWait waitForTime = new WebDriverWait(driver, Duration.ofMillis(timeInSeconds));
+    	waitForTime.withTimeout(Duration.ofMillis(timeInSeconds));
     }
 }
